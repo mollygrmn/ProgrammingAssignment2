@@ -5,7 +5,7 @@
 ## function that set the matrix and its inverse in its environment
 ## they are a pair of functions that are used to cache the matrix and its inverse
 ## makecachematrix is used to pass cachesolve
-## x <- makeCacheMatrix(matrix(1:8, 2, 4))
+## x <- makeCacheMatrix(matrix(1:16, 4, 4))
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -35,5 +35,4 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   inv <- solve(data, ...)
   x$setinverse(inv)
-  inv
 }
